@@ -1,0 +1,16 @@
+{
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"files.associations": {
+		"*.hx": "haxe",
+		"*.hscript": "haxe",
+		"*.hsc": "haxe",
+		"*.hxs": "haxe"
+	  },
+	      "[haxe]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+REM script by theodev
+
+@echo off
+setlocal
+
+echo script to update the project assets (replace it with the current build assets folder)
+echo ----------------
+
+echo trying to delete current "assets" folder
+echo ----------------
+
+if exist "%cd%\assets" (
+    rmdir /s /q "%cd%\assets"
+    echo current "assets" folder was succefully deleted.
+) else (
+    echo there isnt a "assets" folder to delete
+)
+
+echo ----------------
+set /p build_flag=are you working on "debug" or "release"?: 
+
+if /i "%build_flag%"=="debug" (
+    echo build type: debug
+) else if /i "%build_flag%"=="release" (
+    echo build type: release
+) else (
+    echo ur answer must be "release" or "debug", closing program
+    timeout /t 1 /nobreak >nul
+    exit
+)
+echo ----------------
+
+if not exist "%cd%\export\%build_flag%" (
+    echo ur project seems dont have a %build_flag% build. closing program
+    timeout /t 1 /nobreak >nul
+    exit
+)
+
+set /p build_target=on what target are you working on? (for example, windows, android, linux, etc): 
+
+set origin=export/%build_flag%/%build_target%/bin
+
+if not exist "%origin%" (
+    echo ur project seems dont have a %build_target% build. closing program
+    timeout /t 1 /nobreak >nul
+    exit
+)
+
+echo ----------------
+
+echo trying to copy build's assets folder to current project repo...
+
+if not exist "%origin%/assets" (
+    echo ur project seems dont have a assets folder on the build, closing program
+    timeout /t 1 /nobreak >nul
+    exit
+)
+
+xcopy /e /i "%origin%/assets" "%cd%/assets"
+
+echo the mod folder was copied succefully, closing program...
+endlocal
+pause
