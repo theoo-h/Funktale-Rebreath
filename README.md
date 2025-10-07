@@ -19,7 +19,7 @@ Most of the code is trash honestly, especially the Attack Editor.
 I will someday upload wip stuff that its not on the build.
 
 Credits:
-## Mgflo as
+## [Mgflo](https://x.com/mg_flogamer) as
 - Artist
 - Animator
 
@@ -27,7 +27,7 @@ Credits:
 - Phase 1 Sprites
 - First Phase 2 Sprites
 
-## Asado/Yisus as
+## [Asado/Yisus](https://x.com/Asado_3000) as
 - Conceptual artist
 - Background artist
 
@@ -35,14 +35,14 @@ Credits:
 - Conceptual art
 - Judgement Background
 
-## Samu_Music as
+## [Samu_Music](https://x.com/SAMU__MUSIC) as
 - Composer
 - Producer
 
 ### Did
 - Phase 2 Song (wip)
 
-## Theo (me) as
+## [Theo (me)](https://x.com/_the0p) as
 - Programmer
 - Composer
 - Producer
@@ -57,7 +57,23 @@ Credits:
 - Chart Phase 1, Phase 2 (wip), Phase 3 (wip)
 - Menu song
 
-## Hati_e as
+## [FiberFl / Vivit.ogg](https://x.com/eevivit) as
+- Composer
+- Producer
+
+### Did
+- First Phase 2 Song
+- First Phase 3 Song
+
+## [TonicStroom (a friend, not known in fnf community)](https://x.com/TonicStroom) as
+- Composer
+- Intrumental Recording
+
+### Did
+- Record back/lead guitars, compose harmonies for Phase 1 Song
+- Record back/lead guitars, compose harmonies for Sunder song
+
+## [Hati_e](https://x.com/Hati_eee) as
 - Composer
 - Producer
 
@@ -66,14 +82,14 @@ Credits:
 - First menu song
 - His Tale song
 
-## PCDELLORE
+## [PCDELLORE](https://x.com/NOTPCsin) as
 - Artist
 
 ### Did
 - Pixel Sans Sprite
 - Menu Art (sans & gaster)
 
-## SoihanP
+## [SoihanP](https://x.com/SoihanP) as
 - Artist
 
 ### Did
