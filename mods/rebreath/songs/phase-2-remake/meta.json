@@ -1,0 +1,16 @@
+{
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "face",
+	"coopAllowed": false,
+	"name": "phase-2-remake",
+	"color": -7179779,
+	"customValues": {},
+	"stepsPerBeat": 4,
+	"displayName": "Phase 2 Samu",
+	"needsVoices": false,
+	"beatsPerMeasure": 4,
+	"bpm": 155
+}

@@ -1,0 +1,16 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 110,
+	"difficulties": [
+		"normal"
+	],
+	"needsVoices": false,
+	"parsedColor": -8487298,
+	"displayName": "Resonance",
+	"icon": "Icon",
+	"name": "resonance",
+	"color": "#7E7E7E"
+}

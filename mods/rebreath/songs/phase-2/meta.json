@@ -1,0 +1,17 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "Icon",
+	"difficulties": [
+		"Normal"
+	],
+	"parsedColor": -1,
+	"customValues": {},
+	"color": "#FFFFFF",
+	"name": "phase-2",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Phase 2",
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 155
+}

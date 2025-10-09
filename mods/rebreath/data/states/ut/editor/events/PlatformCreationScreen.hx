@@ -1,0 +1,115 @@
+import flixel.FlxG;
+import funkin.editors.ui.UIButton;
+import funkin.editors.ui.UICheckbox;
+import funkin.editors.ui.UIText;
+import funkin.editors.ui.UITextBox;
+import funkin.editors.ui.UIWarningSubstate;
+
+function create() {
+	winTitle = "Add platform";
+	winWidth = 700;
+	winHeight = 450;
+}
+
+function postCreate() {
+	final params = editorSend.params[0];
+	var firstId = params.id;
+
+	headerText = new UIText(30, 60, FlxG.width, 'Position Data       Event Data', 32);
+	add(headerText);
+
+	subHeader = new UIText(30, 110, FlxG.width, 'Pos & Data (x,y)                   Time    ID', 18);
+	add(subHeader);
+
+	timeBox = new UITextBox(subHeader.x + 385, subHeader.y + 30, editorSend.time * 0.001, 60, 32);
+	add(timeBox);
+
+	idBox = new UITextBox(subHeader.x + 505 - 30, subHeader.y + 30, params.id, 100, 32);
+	add(idBox);
+
+	commasUp = new UIText(29, subHeader.y + 30 + 10, FlxG.width, '     ,     ,', 18);
+	add(commasUp);
+
+	// initial pos data
+	posX = new UITextBox(subHeader.x + 2, subHeader.y + 30, params.positionX, 50, 32);
+	add(posX);
+
+	posY = new UITextBox(subHeader.x + 2 + 70, subHeader.y + 30, params.positionY, 50, 32);
+	add(posY);
+
+	sizeHeader = new UIText(30, 110 + 82, FlxG.width, 'Size (Width, Height)', 18);
+	add(sizeHeader);
+
+	// size
+	widthBox = new UITextBox(subHeader.x + 2, subHeader.y + 110, params.width, 50, 32);
+	add(widthBox);
+
+	heightBox = new UITextBox(subHeader.x + 2 + 70, subHeader.y + 110, params.height, 50, 32);
+	add(heightBox);
+
+	paramsTest = new UIText(30, 250 + 40, FlxG.width, 'Motion Parameters', 32);
+	add(paramsTest);
+
+	subParams = new UIText(30, 250 + 60 + 40, FlxG.width, 'Velocity (x,y)', 18);
+	add(subParams);
+
+	// motion velocity
+	velX = new UITextBox(subHeader.x + 2, subParams.y + 30, params.vX, 50, 32);
+	add(velX);
+
+	velY = new UITextBox(subHeader.x + 2 + 70, subParams.y + 30, params.vY, 50, 32);
+	add(velY);
+
+	saveButton = new UIButton(winWidth - 200 - 10, winHeight - 80 - 10, 'Add', () -> {
+		if (idBox.label.text == '') {
+			openSubState(new UIWarningSubstate("Error", "You have to add the Platform ID !", [{label: "Ok", color: 0xFF727272, onClick: function(t) {}}]));
+		} else if ((editingEvent && firstId != idBox.label.text && checkForID(EVENT_PLATFORM, idBox.label.text))
+			|| (!editingEvent && checkForID(EVENT_PLATFORM, idBox.label.text))) {
+			openSubState(new UIWarningSubstate("Error", "This Platform ID is already registered !",
+				[{label: "Ok", color: 0xFF727272, onClick: function(t) {}}]));
+		} else {
+			windowOutput = {
+				row: getRow(),
+				type: EVENT_PLATFORM,
+				time: parse(timeBox.label.text, 0) * 1000,
+				params: [
+					{
+						id: idBox.label.text,
+						positionX: parse(posX.label.text, 0),
+						positionY: parse(posY.label.text, 0),
+						width: parse(widthBox.label.text, 50),
+						height: parse(heightBox.label.text, 20),
+						vX: parse(velX.label.text, 0),
+						vY: parse(velY.label.text, 0)
+					}
+				]
+			};
+			close();
+		}
+	}, 200, 80);
+	saveButton.frames = Paths.getFrames("editors/ui/grayscale-button");
+	saveButton.color = 0xFFA59400;
+	add(saveButton);
+
+	resetValuesButton = new UIButton(winWidth - 200 - 20 - 60, winHeight - 80 - 10 + 10, 'Reset', () -> {
+		timeBox.label.text = posX.label.text = posY.label.text = posA.label.text = velX.label.text = velY.label.text = velA.label.text = accX.label.text = accY.label.text = accA.label.text = dragX.label.text = dragY.label.text = dragA.label.text = '';
+	}, 60, 30);
+	resetValuesButton.frames = Paths.getFrames("editors/ui/grayscale-button");
+	add(resetValuesButton);
+
+	cancelButton = new UIButton(winWidth - 200 - 20 - 60, winHeight - 80 - 10 + 18 + 30, 'Cancel', () -> {
+		if (!editingEvent)
+			nextWindow = 'ut/editor/EventPicker';
+		close();
+	}, 60, 30);
+	cancelButton.frames = Paths.getFrames("editors/ui/grayscale-button");
+	cancelButton.color = 0xffa50000;
+	add(cancelButton);
+}
+
+function parse(num, defValue) {
+	var parsed = Std.parseFloat(num);
+	return num == '' || parsed == Math.NaN ? defValue : parsed;
+}
+
+function update() {}

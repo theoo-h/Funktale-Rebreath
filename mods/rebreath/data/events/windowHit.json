@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "windowHit",
+            "type": "DropDown('izquierda', 'derecha', 'arriba', 'abajo')",
+            "defaultValue": "derecha"
+        }
+    ]
+}

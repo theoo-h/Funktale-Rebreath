@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.7" name="judgement" folder="stages/judgement/" startCamPosY="600" startCamPosX="1000">
+	<dad x="-60" y="180" />
+	<boyfriend x="1000" y="290" scale="1.1" />
+	<!-- Cam offsets works to fix the main character cam lol (do not affect to gaster pos) -->
+	<character name="gaster-undertale" x="0" y="0" camxoffset="-180" camyoffset="540"/>
+</stage>

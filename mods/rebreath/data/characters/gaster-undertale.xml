@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="333" y="-10" sprite="gaster-undertale" scale="0.5" icon="sans" color="#31B0D1" isGF="false">
+	<anim name="idle" anim="idle" x="-5" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="up" x="-6" y="31" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="left" x="127" y="-52" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="right" x="-9" y="-18" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="down" x="-7" y="-68" fps="24" loop="false"/>
+</character>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="logo.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="logo instance 10000" x="0" y="0" width="1115" height="844"/>
+	<SubTexture name="logo instance 10001" x="0" y="0" width="1115" height="844"/>
+	<SubTexture name="logo instance 10002" x="1115" y="0" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10003" x="2208" y="0" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10004" x="0" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10005" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10006" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10007" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10008" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10009" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10010" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10011" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10012" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+	<SubTexture name="logo instance 10013" x="1093" y="844" width="1093" height="829" frameX="-11" frameY="-8" frameWidth="1115" frameHeight="844"/>
+</TextureAtlas>
